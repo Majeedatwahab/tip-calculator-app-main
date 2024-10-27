@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: 320px;
+}
+h1 {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.card {
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border-radius: 10px;
+  padding: 1rem;
+  height: auto;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.icon-person,
+.icon-dollar {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.input-group {
+  margin: 15px 0;
+  text-align: left;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+  text-align: right;
+}
+input[type=number]:focus{
+  border: 2px solid hsl(172, 67%, 45%);
+}
+label {
+  color: hsl(183, 100%, 15%);
+}
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.tip-btn {
+  max-width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+}
+
+.tip-button,
+.custom-tip {
+  padding: 10px;
+  font-size: 18px;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tip-button.active {
+  background-color: hsl(172, 67%, 45%);
+}
+
+
+.results {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.tip-person span,
+.total-person span{
+  font-size: .8rem;
+  color: hsl(184, 14%, 56%);
+}
+.amount {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: right;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset-button {
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 700px;
+  }
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .tip-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .reset-button {
+    margin-top: 80px;
+  }
+}

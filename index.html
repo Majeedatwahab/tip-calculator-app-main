@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+
+<body>
+
+  <main class="container">
+    <h1>SPLI <br> TTER</h1>
+
+    <div class="card">
+      <div class="input-group">
+        <label for="bill">Bill</label><br>
+        <div class="input-wrapper">
+          <img src="images/icon-dollar.svg" class="icon-dollar" alt="icon-dollar">
+          <input type="number" id="bill" name="bill" placeholder="0.00">
+        </div>
+
+        <div class="input-group">
+          <label>Select Tip %</label>
+          <div class="tip-buttons">
+            <button class="tip-button" data-tip="5">5%</button>
+            <button class="tip-button" data-tip="10">10%</button>
+            <button class="tip-button" data-tip="25">15%</button>
+            <button class="tip-button" data-tip="25">25%</button>
+            <button class="tip-button" data-tip="50">50%</button>
+            <input type="number" id="customTip" placeholder="Custom" oninput="setCustomTip()">
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="people">Number of People</label><br>
+          <div class="input-wrapper">
+            <img src="images/icon-person.svg" class="icon-person" alt="icon-person">
+            <input type="number" id="people" value="1" min="1">
+          </div>
+
+        </div>
+      </div>
+      <div class="results">
+        <div class="result">
+          <div class="tip-person">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <span class="amount" id="tipAmount">$0.00</span>
+        </div>
+        <div class="result">
+          <div class="total-person">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <span class="amount" id="totalAmount">$00.00</span>
+        </div>
+        <button class="reset-button" id="resetButton" onclick="resetCalculator()">RESET</button>
+      </div>
+
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
