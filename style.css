@@ -27,12 +27,13 @@ h1 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   height: auto;
 }
 .input-wrapper {
   position: relative;
   width: 100%;
+  
 }
 
 .icon-person,
@@ -47,7 +48,7 @@ h1 {
 }
 
 .input-group {
-  margin: 15px 0;
+  margin-top: 30px;
   text-align: left;
 }
 input[type="number"] {
@@ -58,14 +59,14 @@ input[type="number"] {
   outline: 0;
   border-radius: 5px;
   color: hsl(183, 100%, 15%);
-  background-color: hsl(185, 41%, 84%);
+  background-color: hsl(189, 30%, 88%);
   text-align: right;
 }
 input[type=number]:focus{
   border: 2px solid hsl(172, 67%, 45%);
 }
 label {
-  color: hsl(183, 100%, 15%);
+  color: hsl(184, 16%, 39%);
 }
 .tip-buttons {
   display: grid;
@@ -85,7 +86,7 @@ label {
 .tip-button,
 .custom-tip {
   padding: 10px;
-  font-size: 18px;
+  font-size: 1.2rem;
   background-color: hsl(183, 100%, 15%);
   color: white;
   border: none;
@@ -128,7 +129,7 @@ label {
 .reset-button {
   width: 100%;
   padding: 10px;
-  background-color: hsl(172, 67%, 45%);
+  background-color:  hsl(173, 53%, 33%);
   color: hsl(183, 100%, 15%);
   border: none;
   border-radius: 5px;
@@ -139,7 +140,8 @@ label {
 }
 
 .reset-button:hover {
-  background-color: hsl(185, 41%, 84%);
+  background-color:  hsl(172, 67%, 45%)
+  ;
 }
 
 @media screen and (min-width: 768px) {
